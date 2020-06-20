@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h2>
+        Type anything slowly
+    </h2>
+    <form name="f">
+        <textarea name="txt" cols="40" rows="10" oninput="typeTextarea(this);"></textarea>
+    </form>
+</center>
+
+<script>
+    let arr = ['P','h','ư','ơ','n','g',' ','M','ô','n','g',' ','T','o',' ','V','ã','i',' ','N','ồ','i'];
+    let array = [];
+    let showArray = '';
+    let i = 0;
+
+    function typeTextarea(a) {
+        if (i < arr.length) {
+            array[i] = arr[i];
+            showArray = array.join('');
+        } else if (i >= arr.length) {
+            i = -1;
+            array = [];
+            showArray = array.join('');
+        }
+        i++;
+        a.value = showArray;
+
+
+    }
+</script>
+
+</body>
+</html>
